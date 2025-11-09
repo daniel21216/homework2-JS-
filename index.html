@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка кода</title>
+</head>
+<body>
+    <h1>Откройте консоль браузера (F12)</h1>
+    
+    <script>
+        // Вставьте сюда код из артефакта
+        const userInput = prompt("Введите число:");
+        const maxNumber = Number(userInput);
+        
+        if (isNaN(maxNumber) || maxNumber < 0) {
+          console.log("Пожалуйста, введите корректное положительное число");
+        } else {
+          const multiplesOfFive = [];
+          
+          for (let i = 0; i <= maxNumber; i++) {
+            if (i % 5 === 0) {
+              multiplesOfFive.push(i);
+            }
+          }
+          
+          if (multiplesOfFive.length === 0) {
+            console.log("Sorry, no numbers");
+          } else {
+            console.log("Числа кратные 5:");
+            multiplesOfFive.forEach(num => console.log(num));
+          }
+        }
+    </script>
+</body>
+</html>
